@@ -12,7 +12,7 @@ let package = Package(
             targets: ["DataTypeExtension"]),
         .library(
             name: "UITypeExtension",
-            targets: ["DataTypeExtension"])
+            targets: ["UITypeExtension"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
