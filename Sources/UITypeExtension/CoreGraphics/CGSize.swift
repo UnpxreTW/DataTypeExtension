@@ -6,6 +6,7 @@
 //  Copyright © 2019 Ultracker. All rights reserved.
 //
 import CoreGraphics
+import DataTypeExtension
 
 extension CGSize {
 
