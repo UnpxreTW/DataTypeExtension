@@ -9,6 +9,9 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "DataTypeExtension",
+            targets: ["DataTypeExtension"]),
+        .library(
+            name: "UITypeExtension",
             targets: ["DataTypeExtension"])
     ],
     dependencies: [
@@ -21,6 +24,9 @@ let package = Package(
         .target(
             name: "DataTypeExtension",
             dependencies: []),
+        .target(
+            name: "UITypeExtension",
+            dependencies: ["DataTypeExtension"]),
         .testTarget(
             name: "DataTypeExtensionTests",
             dependencies: ["DataTypeExtension"]),
