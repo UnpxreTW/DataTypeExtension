@@ -28,6 +28,11 @@ extension Int {
         self.init(data: tempOutput)
     }
 
+    public init?(_ data: Data?, isBigEndian: Bool = true) {
+        guard let data = data else { return nil }
+        self.init(data, isBigEndian: isBigEndian)
+    }
+
     /// 限制數值範圍。
     /// - note: high 必須大於 low，否則回傳 nil。
     public func confineRange(from low: Int, to high: Int) -> Int {
