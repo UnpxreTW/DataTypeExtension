@@ -48,14 +48,10 @@ extension Data {
     /// 取得 Data 片段。
     /// - Parameters:
     ///     - location: 起點。
-    ///     - length: 擷取長度。
-    /// - Returns:
-    /// - Note: 預設擷取 4 Bytes。
-    public func getExcerpt(from location: Int, byLength length: Int = 4) -> Data {
-        var offset = length
-        if location + offset > self.count {
-            offset = self.count - location
-        }
-        return self.subdata(in: location ..< location + offset)
+    ///     - length: 擷取長度預設擷取 4 Bytes。
+    /// - Note: 當長度不足則返回 nil 。
+    public func getExcerpt(from location: Int, byLength length: Int = 4) -> Data? {
+        guard location + length <= count else { return nil }
+        return self.subdata(in: location ..< location + length)
     }
 }
