@@ -27,6 +27,16 @@ extension DataConvertible where Self: ExpressibleByIntegerLiteral {
 
 extension Data {
 
+    /// 取得十六進制字串
+    public var hexString: String {
+        withUnsafeBytes {
+            UnsafeBufferPointer(
+                start: $0.bindMemory(to: Byte.self).baseAddress,
+                count: count
+            ).map { String(format: "%02hhX", $0) }.reduce("") { $0 + $1 }
+        }
+    }
+
     public init<T>(from value: T, bySize size: Int? = nil, isBigEndian: Bool = false) {
         var tempData: Data = .init()
         tempData = Swift.withUnsafeBytes(of: value) { Data($0) }
