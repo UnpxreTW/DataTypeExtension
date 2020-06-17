@@ -8,7 +8,7 @@
 
 extension Float {
 
-    /// 限制數值範圍。
+    /// 限制數值範圍
     public func confineRange(from low: Float, to high: Float) -> Float {
         let upper = high > low ? high : low
         let lower = high > low ? low : high

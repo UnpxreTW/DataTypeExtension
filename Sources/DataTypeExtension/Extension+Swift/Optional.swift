@@ -22,21 +22,21 @@ public extension Optional {
 }
 public extension Optional {
 
-    /// 如果為 nil 回傳默認值。
+    /// 如果為 nil 回傳默認值
     /// - parameter default: 默認值。
     /// - Returns: 如果原來的數值為 nil 則回傳默認值，否則回傳原值。
     func or(_ default: Wrapped) -> Wrapped {
         self ?? `default`
     }
 
-    /// 如果為 nil 則執行默認閉包。
+    /// 如果為 nil 則執行默認閉包
     /// - Parameter else:
     /// - Returns: 如果原來的數值為 nil 則執行默認閉包，否則回傳原值。
     func or(else: @autoclosure () -> Wrapped) -> Wrapped {
         self ?? `else`()
     }
 
-    /// 如果為 nil 則擲出默認錯誤。
+    /// 如果為 nil 則擲出默認錯誤
     /// - Parameter exception:
     /// - Returns: 如果原來的數值為 nil 則擲出默認錯誤，否則回傳原值。
     func or(throw exception: Error) throws -> Wrapped {
@@ -54,7 +54,7 @@ public extension Optional {
         try map(closure) ?? `else`()
     }
 }
-/// 錯誤專用可選值擴展。
+/// 錯誤專用可選值擴展
 public extension Optional where Wrapped == Error {
 
     func or(_ else: (Error) -> Void) {

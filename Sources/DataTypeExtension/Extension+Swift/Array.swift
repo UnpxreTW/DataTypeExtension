@@ -20,7 +20,7 @@ extension Array {
 
 public extension Sequence where Iterator.Element == Byte {
 
-    /// 從 UInt8 陣列轉換為 UInt32。
+    /// 從 UInt8 陣列轉換為 UInt32
     /// - Note: 只會轉換前 4 個位元組，陣列長度必須大於 4 位元組，否則回傳零。
     /// - Returns: 轉換結果。
     func toUInt32() -> UInt32 {
@@ -32,12 +32,12 @@ public extension Sequence where Iterator.Element == Byte {
         return tempNumber
     }
 
-    ///  從 UInt8 轉換為 UInt32 後在轉換為 Int(64 bit)。
+    ///  從 UInt8 轉換為 UInt32 後在轉換為 Int(64 bit)
     /// - Note: 只會轉換前 4 個位元組，陣列長度必須大於 4 位元組，否則回傳零。
     /// - Returns: 轉換結果。
     func toUInt32ToInt() -> Int { Int(self.toUInt32()) }
 
-    /// 從 UInt8 陣列轉換為 Int(64 bit)。
+    /// 從 UInt8 陣列轉換為 Int(64 bit)
     /// - Note: 只會轉換前 8 個位元組，陣列長度必須大於 8 位元組，否則回傳零。
     /// - Returns: 轉換結果。
     func toInt() -> Int {

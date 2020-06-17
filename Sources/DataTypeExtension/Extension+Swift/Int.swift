@@ -9,7 +9,7 @@ import Foundation
 
 extension Int {
 
-    /// 從 Data 擷取適當長度轉換為 Int。
+    /// 從 Data 擷取適當長度轉換為 Int
     /// - note: 長度超過 Int 限制大小時會擷取最後適當長度（最後 8 Bytes）進行轉換。
     public init(_ data: Data, isBigEndian: Bool = true) {
         var tempOutput: Data = .init()
@@ -33,7 +33,7 @@ extension Int {
         self.init(data, isBigEndian: isBigEndian)
     }
 
-    /// 限制數值範圍。
+    /// 限制數值範圍
     /// - note: high 必須大於 low，否則回傳 nil。
     public func confineRange(from low: Int, to high: Int) -> Int {
         let upper = high > low ? high : low
@@ -43,14 +43,13 @@ extension Int {
         return self
     }
 
-    /// 限制數值範圍。
-    ///
+    /// 限制數值範圍
     /// - note:
     public func confineRange(in range: ClosedRange<Self>) -> Self {
         confineRange(from: range.lowerBound, to: range.upperBound)
     }
 
-    /// 從 Int(64 bit) 轉換為 4 位元組 UInt8 陣列。
+    /// 從 Int(64 bit) 轉換為 4 位元組 UInt8 陣列
     /// - Note: 只會轉換 4 個位元組大小。
     /// - Returns: 轉換結果。
     public func to4ByteArray() -> [Byte] {
@@ -64,7 +63,7 @@ extension Int {
         return tempArr
     }
 
-    /// 從 Int(64 bit) 轉換為 8 位元組 UInt8 陣列。
+    /// 從 Int(64 bit) 轉換為 8 位元組 UInt8 陣列
     /// - Note: 只會轉換 8 個位元組大小。
     /// - Returns: 轉換結果。
     public func to8ByteArray() -> [Byte] {
@@ -78,7 +77,7 @@ extension Int {
         return tempArr
     }
 
-    /// 從 Int(64 Bit) 轉換為 Bool。
+    /// 從 Int(64 Bit) 轉換為 Bool
     /// - parameter mode: 設定 True 的基準。
     /// - Note:
     /// - Returns: 轉換結果。

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Unpxre. All rights reserved.
 //
 
-/// 從任意類型轉換 Byte 陣列。
+/// 從任意類型轉換 Byte 陣列
 /// - Parameter value: 任意類型變數。
 /// - Returns: 轉換後的 Byte 陣列。
 /// - Note: 大小為原始變數類型的原始大小。

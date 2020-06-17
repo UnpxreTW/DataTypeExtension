@@ -9,7 +9,7 @@ import QuartzCore.CoreAnimation
 
 extension CATransaction {
 
-    /// 取消默認隱式動畫。
+    /// 取消默認隱式動畫
     static func disableAnimation(_ completion: () -> Void) {
         CATransaction.begin()
         CATransaction.setDisableActions(true)

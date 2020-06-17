@@ -55,7 +55,7 @@ extension Data {
         self = tempData
     }
 
-    /// 取得 Data 片段。
+    /// 取得 Data 片段
     /// - Parameters:
     ///     - location: 起點。
     ///     - length: 擷取長度預設擷取 4 Bytes。

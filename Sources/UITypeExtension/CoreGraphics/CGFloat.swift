@@ -10,7 +10,7 @@ import DataTypeExtension
 
 public extension CGFloat {
 
-    /// 限制數值範圍。
+    /// 限制數值範圍
     func confineRange(from low: CGFloat, to high: CGFloat) -> CGFloat {
         let upper = high > low ? high : low
         let lower = high > low ? low : high

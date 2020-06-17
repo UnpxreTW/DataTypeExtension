@@ -17,7 +17,7 @@ extension UIImage {
         return image
     }
 
-    /// 圖片裁切。
+    /// 圖片裁切
     /// - parameter size: 裁切後的大小。
     /// - note: 圖片裁切範圍置中。
     public func splited(by size: CGSize) -> UIImage? {
@@ -28,7 +28,7 @@ extension UIImage {
         return image
     }
 
-    /// 等比例缩放。
+    /// 等比例缩放
     /// - parameter scaleSize: 縮放比例。
     /// - Returns: 調整大小後的圖片。
     /// - Note:

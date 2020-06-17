@@ -10,12 +10,12 @@ import DataTypeExtension
 
 extension CGSize {
 
-    /// 矩形的中心點座標。
+    /// 矩形的中心點座標
     public var centerPoint: CGPoint {
         CGPoint(x: self.width / 2, y: self.height / 2)
     }
 
-    /// 產生一個邊長為 length 的矩形。
+    /// 產生一個邊長為 length 的矩形
     /// - Parameter length: 矩形的邊長。
     public init(length: CGFloat) {
         self.init(width: length, height: length)

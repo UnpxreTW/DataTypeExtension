@@ -13,7 +13,7 @@ extension Double {
         self.init(value)
     }
 
-    /// 從 Double 轉換為 8 位元組陣列。
+    /// 從 Double 轉換為 8 位元組陣列
     /// - Note:
     /// - Returns: 轉換結果。
     public func to8ByteArray() -> [Byte] {

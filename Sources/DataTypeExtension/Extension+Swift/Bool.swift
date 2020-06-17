@@ -22,13 +22,13 @@ extension Bool {
         self.init(data)
     }
 
-    /// 從 Bool 轉換為字串。
+    /// 從 Bool 轉換為字串
     /// - Returns: 轉換結果。
     public func toString() -> String {
         self ? "True" : "False"
     }
 
-    /// 從 Bool 轉換為 Int(64 bit)。
+    /// 從 Bool 轉換為 Int(64 bit)
     /// - Note: False 為 0、True 為 1。
     /// - Returns: 轉換結果。
     public func toInt() -> Int {

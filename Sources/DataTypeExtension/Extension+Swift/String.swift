@@ -10,7 +10,7 @@ import Foundation
 extension String {
 
     /// 從十六進制字串轉換為 `Data` 結構
-    /// note: 會自動省略 `0x` 前綴，當無法轉換時會回傳 `nil`
+    /// note: 會自動省略 `0x` 前綴，當無法轉換時會回傳 `nil`。
     public var hexadecimal: Data? {
         let _string = dropFirst(hasPrefix("0x") ? 2 : 0)
         return Data(sequence(state: _string.startIndex) { startIndex in
@@ -21,7 +21,7 @@ extension String {
         })
     }
 
-    /// 根據輸入範圍裁切字串。
+    /// 根據輸入範圍裁切字串
     /// - Parameter start: 起始字元索引值，必須大於 0 並小於結束字元索引值。
     /// - Parameter end: 結束字元索引值，必須大於起始字元索引值，如果沒有值則預設為字串長度。
     /// - Returns: 裁切後的字串，如果長度不足則回傳可使用最大長度。
