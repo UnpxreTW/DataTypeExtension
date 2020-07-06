@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "DataTypeExtension",
+    platforms: [.iOS(.v12)],
     products: [
         .library(name: "DataTypeExtension", type: .dynamic, targets: ["DataTypeExtension"]),
         .library(name: "UITypeExtension", type: .dynamic, targets: ["UITypeExtension"]),
