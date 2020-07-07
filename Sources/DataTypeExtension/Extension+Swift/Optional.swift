@@ -46,6 +46,14 @@ public extension Optional {
 }
 public extension Optional {
 
+    func than(_ closure: @escaping ((Wrapped) -> Void)) {
+        if let wrapped = self {
+            closure(wrapped)
+        }
+    }
+}
+public extension Optional {
+
     func map<T>(_ closure: (Wrapped) throws -> T, default: T) rethrows -> T {
         try map(closure) ?? `default`
     }
