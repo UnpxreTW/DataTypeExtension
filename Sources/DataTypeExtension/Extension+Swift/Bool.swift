@@ -5,7 +5,8 @@
 //  Created by Unpxre on 2019/11/15.
 //  Copyright © 2019 Unpxre. All rights reserved.
 //
-import Foundation
+import struct Foundation.Data
+
 
 extension Bool {
 
