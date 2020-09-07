@@ -7,6 +7,7 @@
 //
 import struct Foundation.Data
 
+public func not(_ bool: Bool) -> Bool { !bool }
 
 extension Bool {
 
