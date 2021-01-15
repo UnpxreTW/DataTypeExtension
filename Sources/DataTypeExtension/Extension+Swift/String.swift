@@ -59,6 +59,31 @@ extension String {
         }
         return true
     }
+    
+    public var isTypingIPv4Address: Bool {
+        let pattern = """
+            ^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[.])\
+            {0,3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])?$
+            """
+        let regexText = NSPredicate(format: "SELF MATCHES %@", pattern)
+        return regexText.evaluate(with: self)
+    }
+    
+    public var isIPv4Address: Bool {
+        let pattern = """
+            (25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d\
+            |1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.\
+            (25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})
+        """
+        let regexText = NSPredicate(format: "SELF MATCHES %@", pattern)
+        return regexText.evaluate(with: self)
+    }
+    
+    private var isTCPPort: Bool {
+        let pattern = "^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])"
+        let regexText = NSPredicate(format: "SELF MATCHES %@", pattern)
+        return regexText.evaluate(with: self)
+    }
 }
 
 import UIKit
